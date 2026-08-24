@@ -1,0 +1,74 @@
+Requirements:
+
+S	- specific
+M	- measurable
+A	- achievable
+R	- relevant
+T	- testable
+
+
+The app should be fast - not measurable, not testable, not specific
+- The timesheet list screen must render within 1.5 seconds at P95 on a 4G LTE connection
+
+
+The app should be secure - not specific
+- All authentication tokens must be stored in the device Keychain (iOS) or Keystore (Android)
+	and must expire after 8 hours of inactivity
+
+Users should be able to manage their profiles - not specific - what are the acceptance criteria?
+- Users must be able to update their display name, email address, and notification preferences
+	from the profile screen
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fact #1 of life in software development:		Things Change!
+
+
+
+Ideas to prompt input in a Sprint Retrospective:
+
+Start/Stop/Continue
+Mad/Sad/Glad
+Liked/Learned/Lacked/Longed For
+
+
+we should end up with actionable items and set a target date
+"By next Wednesday, we will add an explicit 'API contract reviewed' checkbox to our DoD,
+	owned by Alex"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
