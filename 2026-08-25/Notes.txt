@@ -1,0 +1,202 @@
+
+Object-oriented developers are encouraged to "Code to the interface"!
+
+
+
+Inside the Person class, the variable's data type is
+an interface
+
+
+IPayCalculator _calc = HourlyPayCalculator()
+
+<and when different behavior is required>
+
+_calc = SalariedPayCalculator()
+
+<so when we need to calculate pay>
+
+pay_amt = _calc.calculate_pay()
+
+
+
+
+
+if instead, the variable's data type is specific:
+
+
+HourlyPayCalculator _calc = HourlyPayCalculator()
+
+pay_amt = _calc.calculate_pay()
+
+<in this scenario, _calc cannot be changed:>
+_calc = SalariedPayCalculator()	# this would be 
+						# a compile error
+
+
+
+
+
+
+
+Without applying DIP, objects in Business Logic layer
+would:
+
+
+OracleCustomerRepository _cust_rep = OracleCustomerRepository() 
+
+
+then, if we move to MongoDb for data store, we
+would have to create the MongoDb data access objects
+but also change business logic:
+
+
+MongoCustomerRepository _cust_rep = MongoCustomerRepository()
+
+
+
+Instead, if we design using DIP, the business logic layer:
+
+ICustomerRepository _cust_rep = OracleCustomerRepository()
+
+<change to>
+
+ICustomerRepository _cust_rep = MongoCustomerRepository()
+
+
+
+
+Notes on Liskov  Substitution:
+
+
+
+func sendMessage(to: Person) {
+	// build body of message
+	if (to is Employee) {
+		// customize message
+	} else if (to is Customer) {
+		// customer-specific addition to body
+	}
+}
+
+
+let e: Employee = Employee()
+sendMessage(e)				# this should work if Employee extends Person
+
+
+// to fix the issue, each kind of Person could override a method in the base class,
+
+class Person {
+	getEmailDetails() -> String { . . . }
+}
+
+
+// and the sendEmail function would use that method:
+func sendMessage(to: Person, ) {
+	// build body of message
+	body += to.getEmailDetails()
+}
+
+
+
+
+
+
+
+
+
+Dependency Inversion thoughts
+
+
+// this class has a hidden dependency
+class MortgageCalculator {
+
+	func calcPayment(amount, years, apr) {
+		months = years * 12
+		rate = apr / 12
+		calc = LoanCalculator()
+		
+		payment = calc.payment(amount, months, rate)
+
+		
+	}
+
+}
+
+
+
+
+
+// Python regex:
+
+
+pattern = r"""
+(\(?\d{3}\)?)?		#optional area code with optional parens
+[-\s.]?			#optional separator
+\d{3}			# 3 digit exchange
+[-\s.]			# separator
+\d{4}			# final 4 digits
+"""
+
+match = re.search(pattern, content, re.VERBOSE)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Semantic Versioning
+- an effort to embed meaning into version numbers
+- 3-part version numbers (Major.Minor.Revision)
+- reasons for incrementing a particular component of that version number
+
+If there are breaking changes in the new release, increment Major version
+1.2.3		->	2.0.0
+
+If no breaking changes, but there are new features, increment Minor version
+1.2.3		->	1.3.0
+
+If no breaking changes, no new features, just refactoring for performance or bug fixes,
+	increment the revision
+1.2.3		->	1.2.4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
