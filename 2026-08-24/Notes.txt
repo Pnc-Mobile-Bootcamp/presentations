@@ -52,7 +52,23 @@ we should end up with actionable items and set a target date
 
 
 
+Metrics for Scrum:
 
+Velocity - story points completed per sprint
+		- forecast sprint capacity
+		- DO NOT use to compare teams
+
+Burndown Chart
+	- remaining (uncompleted) work (in story points) plotted against time (remaining in sprint)
+
+Burnup Chart
+	- work completed against total scope
+	- problem: how do we know the total # points for the entire project?
+
+Cycle Time
+	- time from when a story is started until it is Done
+	- long cycle time indicates we have too much work-in-progress
+		"Stop starting and start finishing"
 
 
 
