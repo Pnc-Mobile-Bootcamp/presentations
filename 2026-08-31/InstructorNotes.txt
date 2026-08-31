@@ -1,0 +1,76 @@
+
+Swift is case-sensitive!
+
+
+var message = "hello"
+
+print(Message)			// compile error!
+
+
+
+var myVariable: Int?
+
+num = 1
+
+num = 2
+
+num = 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+guard let x = optional else {
+	return
+}
+
+guard x > 0 else {
+	return
+}
+
+doWork()
+
+
+
+
+transfer(500.00, "Checking", "Savings")
+
+
+let volume = cylinderVolume(5, 3)
+
+let volume = cylinderVolume(radius: 5, height: 3)
+
+
+
+
+
+
+
+
+
+
+
+
+func myFunction() -> [Any] {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
