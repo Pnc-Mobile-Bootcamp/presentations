@@ -1,0 +1,197 @@
+// imagine what the code of array.forEach() looks like:
+
+func forEach(someFunc) {
+	
+	for item in self {
+		someFunc(item)
+	}
+
+}
+
+
+
+// imagine what the code of array.filter() looks like:
+
+func filter(filterFunc) {
+	var result = []
+
+	for item in self {
+		if filterFunc(item) {
+			result.append(item)
+		}
+	}
+
+	return result
+}
+
+
+// imagine what the code of array.map() looks like:
+
+func map(transformFunc) {
+	
+	var result = []
+
+	for item in self {
+		var newValue = transformFunc(item)
+		result.append(newValue)
+	}
+
+	return result
+	
+}
+
+
+
+// imagine what the code of array.reduce() looks like:
+
+func reduce(intialSummary, reducerFunc) {
+	
+	var total = initialSummary
+
+	for item in self {
+		total = reducerFunc(total, item)
+	}
+	
+	return total
+}
+
+
+
+
+
+
+
+Value type vs. Reference type
+
+
+var value1 = 12
+
+var value2 = value1		// after this, if we change one of the variables, will the other change as well?
+
+value2 = 17
+
+print(value1)			// 12, because Int is a value type
+
+
+// this means when we assign one variable as the value of another variable ( value2 = value1 )
+// value2 gets a copy of the value in value1
+
+
+
+var value3 = Employee(id: "abc123", name: "Betty", email: "betty@example.com")
+
+var value4 = value3		// after this, if we change something about value4, will value3 see that change?
+
+value4.name = "Jo"
+
+print(value3.name)		// Jo, because objects are reference types
+
+
+
+
+
+
+
+"Code to the interface"
+
+"Code to the protocol"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
