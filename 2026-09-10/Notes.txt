@@ -1,0 +1,173 @@
+
+
+<proportional font, each letter can be a different width>
+WIAMTl
+
+<monospaced font>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Create an artist class that is Identifiable, Hashable, Codable
+
+give it properties:
+
+id: 			Int
+name: 		String
+genre: 		String
+location: 		String
+imageUrl:		String
+description:	String
+tags: 		String
+
+give it an initializer with parameters for every property
+
+for the Hashable protocol, use the id property for both the == operator and creating the hash
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+What is a hash?
+
+A hash is a fixed size binary representation of some digital content.
+- two hashes of the same digital content will be the same
+- small difference in the digital content will result in a large difference in the hash
+
+
+
+
+
+A hashing algorithm is a function that:
+
+- Chaotic functions - a small difference in the input makes a large difference in the output
+- other category of functions - create a fixed size output no matter the size of the input
+- any two random inputs have a vanishingly small chance of producing the same output
+
+
+
+
+
+
+artists: [Artist] = [ . . . ]
+
+
+var searchFor = Artist(id: 12, . . . )
+
+if artists.contains(searchFor)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
