@@ -1,4 +1,4 @@
-class Artist {
+class Artist: Identifiable, Hashable, Codable {
     let id: Int
     let name: String
     let genre: String
@@ -6,19 +6,10 @@ class Artist {
     let imageUrl: String
     let description: String
     let tags: String
-    let login: String
-    let password: String
 
     init(
-        id: Int,
-        name: String,
-        genre: String,
-        location: String,
-        imageUrl: String,
-        description: String,
-        tags: String,
-        login: String,
-        password: String
+        id: Int, name: String, genre: String, location: String,
+        imageUrl: String, description: String, tags: String,
     ) {
         self.id = id
         self.name = name
@@ -27,9 +18,16 @@ class Artist {
         self.imageUrl = imageUrl
         self.description = description
         self.tags = tags
-        self.login = login
-        self.password = password
     }
+
+    static func == (lhs: Artist, rhs: Artist) -> Bool {
+        lhs.id == rhs.id
+    }
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+
 }
 
 let artists: [Artist] = [
@@ -40,9 +38,7 @@ let artists: [Artist] = [
         location: "Los Angeles, CA",
         imageUrl: "/images/highvoltage.jpg",
         description: "This all-female classic rock/heavy metal band will get you up and moving.",
-        tags: "Heavy Rock,Party,Loud",
-        login: "voltage",
-        password: "password"
+        tags: "Heavy Rock,Party,Loud"
     ),
     Artist(
         id: 101,
@@ -51,9 +47,7 @@ let artists: [Artist] = [
         location: "Miami, FL",
         imageUrl: "/images/selfiesim.jpg",
         description: "A current pop group fronted by a dynamic female singer.",
-        tags: "Pop Music,Modern,Dance",
-        login: "selfie",
-        password: "password"
+        tags: "Pop Music,Modern,Dance"
     ),
     Artist(
         id: 102,
@@ -62,9 +56,7 @@ let artists: [Artist] = [
         location: "New York, NY",
         imageUrl: "/images/donna.jpg",
         description: "A piano duo that has been entertaining audiences for over 12 years.",
-        tags: "Piano,Duo,Adult Contemporary",
-        login: "donna",
-        password: "password"
+        tags: "Piano,Duo,Adult Contemporary"
     ),
     Artist(
         id: 105,
@@ -73,9 +65,7 @@ let artists: [Artist] = [
         location: "New York, NY",
         imageUrl: "/images/CarlosDream.jpg",
         description: "Described by Entertainment Weekly as 'Barry White meets Al Green', Carlos will enchant you with his romantic, soulful sound.",
-        tags: "Rock,Soul,Romance",
-        login: "dream",
-        password: "password"
+        tags: "Rock,Soul,Romance"
     ),
     Artist(
         id: 104,
@@ -84,9 +74,7 @@ let artists: [Artist] = [
         location: "New York, NY",
         imageUrl: "/images/chandler.jpg",
         description: "Joan's unique cultural and political viewpoint will have you laughing in your seat.",
-        tags: "Comedian,Political,Mature",
-        login: "chandler",
-        password: "password"
+        tags: "Comedian,Political,Mature"
     ),
     Artist(
         id: 103,
@@ -95,8 +83,6 @@ let artists: [Artist] = [
         location: "Chicago, IL",
         imageUrl: "/images/marco.jpg",
         description: "Family-friendly stage and street magic performed with a witty flair.",
-        tags: "Street Magic,Juggling,Unicycle",
-        login: "marco",
-        password: "password"
+        tags: "Street Magic,Juggling,Unicycle"
     )
 ]
