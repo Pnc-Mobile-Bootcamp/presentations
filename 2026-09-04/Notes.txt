@@ -1,0 +1,124 @@
+
+
+
+var total = 0.0
+
+for xact in transactions {
+	total = total + xact.amount
+}
+
+
+// to do this with reduce:
+
+func accumulateTransAmount(subtotalSoFar: Double, currentItem: Transaction) -> Double {
+	return subtotalSoFar + currentItem.amount
+}
+
+
+var total = 0.0
+for xact in transactions {
+	total = accumulateTransAmount(total, xact)
+}
+
+total = transactions.reduce(0.0, accumulateTransAmount)
+
+total = transactions.reduce(0.0, { sub: Double, item: Transaction -> Double in
+	return sub + item.amount
+ })
+
+
+
+
+
+
+
+
+
+
+
+// suppose we have a collection of 10_000 customer objects
+// if we store those in an array and then want to find a specific customer
+
+
+// if we instead store them in a dictionary
+// and use the customer ID as the key and the customer object as the value
+
+// Dictionaries are VERY efficient at locating a value given its key
+
+
+
+
+
+
+
+
+
+
+https://github.com/pnc-mobile-bootcamp/labs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Semantic Versioning Rule
+
+version numbers have meaning
+
+major.minor.revision
+
+if there are breaking changes, increment major version
+if no breaking changes, but new functionality, increment minor version
+if no breaking changes, no new functionality, just bugfixes, refactor for performance, increment revision
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
