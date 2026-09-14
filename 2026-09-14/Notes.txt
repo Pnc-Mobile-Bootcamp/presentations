@@ -1,0 +1,195 @@
+Early web services used XML for the data interchange format
+wrapped all message in SOAP packages (an XML format)
+
+ideally, published a .wsdl	 document describing how to interact with the service
+
+
+after some experience, a majority of the interactions needed with a web service
+are basic CRUD operations (Create-Read-Update-Delete)
+
+for these basic operations, a REST-ful service is often sufficient
+
+what is REST?
+(Representational State Transfer)
+
+REST-ful principles:
+- everything on the web is a resource
+- each resource is identified by a unique URL
+- resource could be data about one thing or a collection of things
+- interact with resources via common, standard protocols (HTTP)
+- exchange data with resources using common, standard formats (JSON, XML, HTML)
+- a request sent (using standard protocol) to a service (referencing a particular resource)
+	should be responded to with a representation of that resource (in a standard format)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+mysite.com/api/artists
+mysite.com/api/artists/442
+
+
+mysite.com/api/events
+
+mysite.com/api/products
+
+
+
+Python:
+type(my_variable)		# returns the data type of the variable
+
+
+Swift:
+Artist.self				// reference to the data type Artist
+
+[Artist].self			// reference to the data type Array<Artist>
+
+
+
+
+JSON
+some_field
+
+
+Swift
+someField
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

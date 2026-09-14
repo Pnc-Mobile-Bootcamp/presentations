@@ -68,7 +68,7 @@ class MockBoardMemberRepository: RepositoryProtocol<BoardMember> {
         items.first(where: { $0.id == id })
     }
     
-    func insert(_ item: BoardMember) async throws {
+    func insert(_ item: BoardMember) async throws -> BoardMember {
         throw FeatureError.notImplemented
     }
     

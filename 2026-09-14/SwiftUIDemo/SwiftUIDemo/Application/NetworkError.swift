@@ -7,6 +7,10 @@
 
 enum NetworkError: Error {
     case invalidURL
-    case invalidResponse
+    case noConnection
+    case badResponse(statusCode: Int)
+    case encodingFailed(underlying: Error)
+    case decodingFailed(underlying: Error)
+    case unauthorized
 }
 

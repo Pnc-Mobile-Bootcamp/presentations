@@ -75,7 +75,7 @@ class MockArtistRepository: RepositoryProtocol<Artist> {
         artists.first(where: { $0.id == id })
     }
     
-    func insert(_ item: Artist) async throws {
+    func insert(_ item: Artist) async throws -> Artist {
         throw FeatureError.notImplemented
     }
     
