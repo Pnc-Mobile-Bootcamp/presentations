@@ -30,7 +30,8 @@ data class BoardMemberDetailsRoute(
 data object LegacyArtistListRoute: EventPlannerRoute
 
 
-
+@Serializable
+data object OrdersRoute: EventPlannerRoute
 
 
 

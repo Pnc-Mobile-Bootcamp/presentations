@@ -22,6 +22,7 @@ import com.pnc.jetpackcomposedemos.features.auth.presentation.LoginScreen
 import com.pnc.jetpackcomposedemos.features.boardmembers.domain.BoardMember
 import com.pnc.jetpackcomposedemos.features.boardmembers.presentation.BoardMemberDetails
 import com.pnc.jetpackcomposedemos.features.boardmembers.presentation.BoardMemberList
+import com.pnc.jetpackcomposedemos.features.orders.presentation.OrdersScreen
 import com.pnc.jetpackcomposedemos.legacy.LegacyArtistList
 
 @Composable
@@ -59,8 +60,8 @@ fun EventPlannerApp(
                         onViewBoardMembers = {
                             navController.navigate(BoardMemberListRoute)
                         },
-                        onLegacyArtists = {
-                            navController.navigate(LegacyArtistListRoute)
+                        onViewOrders = {
+                            navController.navigate(OrdersRoute)
                         }
                     )
                 }
@@ -112,15 +113,10 @@ fun EventPlannerApp(
                     }
                 }
 
+                composable<OrdersRoute> {
+                    OrdersScreen(useTwoPaneLayout = useTwoPaneLayout)
+                }
 
-//                composable<LegacyArtistListRoute> {
-//                    LegacyArtistList(
-//                        artists = artists,
-//                        onArtistSelected = { artistId ->
-//                            navController.navigate(ArtistDetailsRoute(artistId))
-//                        }
-//                    )
-//                }
 
             }
         }
