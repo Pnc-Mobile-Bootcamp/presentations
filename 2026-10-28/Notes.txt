@@ -1,0 +1,229 @@
+
+
+From our ViewModels, in the Composables that used a ViewModel we used .collectAtState()  - consider .collectAsStateWithLifecycle() instead
+
+
+collectAsState							collectAsStateWithLifecycle
+- keeps collecting all the time				- pauses collection when the App is backgrounded
+- higher battery drain					- resource-efficient
+- ongoing database/network queries			- zero overhead when screen is hidden
+- potential memory leaks					- no inherent risk of memory leaks
+- platformAgnostic						- only works on Android
+- included in compose-runtime				- requires android.lifecycle:lifecycle-runtime-compose
+
+
+
+Other ways of storing some state data (in a composable):									or in a business layer object:
+remember()  							rememberSaveable()							SavedStateHandle
+- survive recomposition					- survive recomposition							- survives recomposition/rotation
+- not configuration changes				- survive configuration changes						- survives configuration
+- not process death						- survive process death							- survives process death
+- stored in-memory cache					- serialized into an Android bundle					- tied to the lifecycle of the ViewModel (or business object)
+- can store any Kotlin data type				- can only store primitive, Strings, or Parcelable		- can only store Primitives, Strings, Parcelable
+									- (you can always implement a Saver class
+										to store other types)
+
+
+
+
+
+
+
+
+Regarding stability of input parameters in the decision for whether a composable is skippable:
+
+Modern Kotlin uses "Strong Skipping Mode" where some parameters that are "unstable" may still
+allow the function to be "skippable". (In this case, Compose will just use instance comparison ,
+i.e. === instead of equals(), which will force a recomposition if the object reference change,
+even if the data inside is identical).
+
+
+
+
+Command to build the compose reports:
+
+./gradlew :app:clean :app:compileDebugKotlin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
