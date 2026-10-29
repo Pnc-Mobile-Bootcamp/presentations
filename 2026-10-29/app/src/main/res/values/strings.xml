@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">JetpackComposeDemos</string>
+
+    <!-- Common -->
+    <string name="common_add">Add</string>
+    <string name="common_clear">Clear</string>
+    <string name="common_close">Close</string>
+    <string name="common_error">Error: %1$s</string>
+    <string name="common_welcome">Welcome, %1$s</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_title">Event Planning Operations</string>
+    <string name="dashboard_view_artists">View Available Artists</string>
+    <string name="dashboard_view_board_members">View Board Members</string>
+    <string name="dashboard_view_orders">View Orders</string>
+    <string name="dashboard_view_todos">View To-Dos</string>
+    <string name="dashboard_sign_out">Sign out</string>
+
+    <!-- Settings -->
+    <string name="dashboard_settings">Settings</string>
+    <string name="settings_title">Settings</string>
+    <string name="settings_theme">Theme</string>
+    <string name="settings_theme_system">Follow system</string>
+    <string name="settings_theme_light">Light</string>
+    <string name="settings_theme_dark">Dark</string>
+    <string name="settings_show_location">Show location on artist cards</string>
+
+    <!-- Sign in -->
+    <string name="sign_in_button">Sign in</string>
+    <string name="sign_in_waiting">Waiting for the browser...</string>
+
+    <!-- Artists -->
+    <string name="artists_title">Available Artists</string>
+    <string name="artists_back">Return to dashboard</string>
+    <plurals name="artists_displaying">
+        <item quantity="one">Displaying %d artist</item>
+        <item quantity="other">Displaying %d artists</item>
+    </plurals>
+    <string name="artists_show_filter">Show filter</string>
+    <string name="artists_selected">Selected artist</string>
+    <string name="artists_filter_title">Filter Artists</string>
+    <string name="artists_genre_label">Genre</string>
+    <string name="artists_location_label">Location</string>
+    <string name="artists_scroll_top">Scroll to top</string>
+    <string name="artist_favorite">Favorite</string>
+    <string name="artist_not_favorite">Not favorite</string>
+    <string name="artist_genre">Genre: %1$s</string>
+    <string name="artist_location">Location: %1$s</string>
+    <string name="artist_not_found">Artist not found</string>
+    <string name="artist_picture">picture of %1$s</string>
+
+    <!-- To-dos -->
+    <string name="todo_add_item">Add a new to-do item</string>
+    <string name="todo_new_hint">New to-do</string>
+    <string name="todo_empty">No to-dos</string>
+    <string name="todo_completed">Completed</string>
+    <string name="todo_not_completed">Not completed</string>
+
+    <!-- Orders -->
+    <string name="orders_empty">No orders found</string>
+    <string name="order_number">Order #:%1$d</string>
+    <string name="order_customer">Customer: %1$s %2$s</string>
+    <string name="order_date">Order Date: %1$s</string>
+    <string name="order_ship_date">Ship Date: %1$s</string>
+    <string name="order_col_product">Product</string>
+    <string name="order_col_qty">Qty</string>
+    <string name="order_col_unit_price">$/per</string>
+    <string name="order_col_total">Total</string>
+</resources>
