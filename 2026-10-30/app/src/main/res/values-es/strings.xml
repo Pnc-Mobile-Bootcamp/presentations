@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Common -->
+    <string name="common_add">Agregar</string>
+    <string name="common_clear">Borrar</string>
+    <string name="common_close">Cerrar</string>
+    <string name="common_error">Error: %1$s</string>
+    <string name="common_welcome">Bienvenido, %1$s</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_title">Operaciones de planificación de eventos</string>
+    <string name="dashboard_view_artists">Ver artistas disponibles</string>
+    <string name="dashboard_view_board_members">Ver miembros de la junta</string>
+    <string name="dashboard_view_orders">Ver pedidos</string>
+    <string name="dashboard_view_todos">Ver tareas</string>
+    <string name="dashboard_sign_out">Cerrar sesión</string>
+
+    <!-- Settings -->
+    <string name="dashboard_settings">Ajustes</string>
+    <string name="settings_title">Ajustes</string>
+    <string name="settings_theme">Tema</string>
+    <string name="settings_theme_system">Seguir el sistema</string>
+    <string name="settings_theme_light">Claro</string>
+    <string name="settings_theme_dark">Oscuro</string>
+    <string name="settings_show_location">Mostrar la ubicación en las tarjetas de artistas</string>
+
+    <!-- Sign in -->
+    <string name="sign_in_button">Iniciar sesión</string>
+    <string name="sign_in_waiting">Esperando al navegador...</string>
+
+    <!-- Artists -->
+    <string name="artists_title">Artistas disponibles</string>
+    <string name="artists_back">Volver al panel</string>
+    <plurals name="artists_displaying">
+        <item quantity="one">Mostrando %d artista</item>
+        <item quantity="many">Mostrando %d de artistas</item>
+        <item quantity="other">Mostrando %d artistas</item>
+    </plurals>
+    <string name="artists_show_filter">Mostrar filtro</string>
+    <string name="artists_selected">Artista seleccionado</string>
+    <string name="artists_filter_title">Filtrar artistas</string>
+    <string name="artists_genre_label">Género</string>
+    <string name="artists_location_label">Ubicación</string>
+    <string name="artists_scroll_top">Ir al principio</string>
+    <string name="artist_favorite">Favorito</string>
+    <string name="artist_not_favorite">No es favorito</string>
+    <string name="artist_genre">Género: %1$s</string>
+    <string name="artist_location">Ubicación: %1$s</string>
+    <string name="artist_not_found">Artista no encontrado</string>
+    <string name="artist_picture">foto de %1$s</string>
+
+    <!-- To-dos -->
+    <string name="todo_add_item">Agregar una tarea nueva</string>
+    <string name="todo_new_hint">Nueva tarea</string>
+    <string name="todo_empty">No hay tareas</string>
+    <string name="todo_completed">Completada</string>
+    <string name="todo_not_completed">No completada</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Inicio</string>
+    <string name="nav_artists">Artistas</string>
+    <string name="nav_todos">Tareas</string>
+    <string name="nav_orders">Pedidos</string>
+    <string name="nav_settings">Ajustes</string>
+
+    <!-- Orders -->
+    <string name="orders_empty">No se encontraron pedidos</string>
+    <string name="order_number">Pedido n.º %1$d</string>
+    <string name="order_customer">Cliente: %1$s %2$s</string>
+    <string name="order_date">Fecha del pedido: %1$s</string>
+    <string name="order_ship_date">Fecha de envío: %1$s</string>
+    <string name="order_col_product">Producto</string>
+    <string name="order_col_qty">Cant.</string>
+    <string name="order_col_unit_price">$/unidad</string>
+    <string name="order_col_total">Total</string>
+</resources>
