@@ -1,0 +1,12 @@
+<resources>
+    <string name="todo_add">Add</string>
+    <string name="todo_add_item">Add a new to-do item</string>
+    <string name="todo_new_hint">New to-do</string>
+    <string name="todo_empty">No to-dos</string>
+    <string name="todo_error">Error: %1$s</string>
+    <string name="todo_completed">Completed</string>
+    <string name="todo_not_completed">Not completed</string>
+    <string name="todo_deleted">To-do deleted</string>
+    <string name="todo_undo">Undo</string>
+    <string name="todo_delete">Delete</string>
+</resources>

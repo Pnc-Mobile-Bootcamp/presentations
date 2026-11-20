@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="todo_add">Agregar</string>
+    <string name="todo_add_item">Agregar una tarea nueva</string>
+    <string name="todo_new_hint">Nueva tarea</string>
+    <string name="todo_empty">No hay tareas</string>
+    <string name="todo_error">Error: %1$s</string>
+    <string name="todo_completed">Completada</string>
+    <string name="todo_not_completed">No completada</string>
+    <string name="todo_deleted">Tarea eliminada</string>
+    <string name="todo_undo">Deshacer</string>
+    <string name="todo_delete">Eliminar</string>
+</resources>

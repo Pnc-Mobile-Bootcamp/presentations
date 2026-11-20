@@ -1,0 +1,12 @@
+# Only the rules we change from detekt's defaults (buildUponDefaultConfig = true).
+naming:
+  FunctionNaming:
+    # Composable functions start with a capital letter by convention
+    ignoreAnnotated: ['Composable']
+  TopLevelPropertyNaming:
+    constantPattern: '[A-Z][A-Za-z0-9_]*'
+style:
+  MagicNumber:
+    ignoreAnnotated: ['Composable']
+    ignoreNamedArgument: true
+    ignorePropertyDeclaration: true

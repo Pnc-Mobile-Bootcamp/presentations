@@ -1,0 +1,167 @@
+Installing and Configuring Jenkins locally
+
+
+Part 1 - setting up Java
+
+1. Jenkins needs Java installed
+	- needs either version 21 or 25
+
+2. Environment variables
+	JAVA_HOME	- the location where Java is installed (not the "bin" folder, but right above that)
+	PATH		- add the location of the Java "bin" folder to this
+
+
+
+
+Part 2 - create a local user account that has the permission to "log on as a service"
+
+1. Create a local user account
+
+2. Run secpol.msc
+	- on the left, go to Local Policies -> User Rights Assignment
+	- on the right, scroll down to "Log on as a service" and double-click it
+	- click "Add User or Group"
+	- Add your local user from step 1
+
+
+
+Part 3 - Install Jenkins
+
+1. Navigate to Jenkins.io/download
+
+2. In the installation, use the account created above (if you were able to assign the "Log on as a service" permission)
+	- otherwise, use the "LocalSystem" account (built-in Windows service account)
+
+3. Use the default port 8080 (if is it available)
+
+4. Verify your JDK location
+
+5. Complete the installation
+
+
+
+
+Part 4 - Configure Jenkins (for general usage)
+
+1. When installation completes, if your browser does not automatically open, then open your 
+browser to localhost:8080 (or whatever port you used in installation).
+
+2. You should see an "Unlock Jenkins" screen. Locate the file with the initial admin password, and 
+use it to unlock Jenkins
+
+3. You could browse through plugins to select desired plugins, but just use suggested ones for now.
+
+4. Fill out the form to create the first admin user.
+
+5. Confirm the URL for instance configuration.
+
+6. Start using Jenkins!!
+
+
+
+
+
+
+
+Side Quest:
+
+GitHub polling schedule syntax:
+
+minute hour day-of-month month day-of-week
+
+* * * * *		any minute, any hour, any day, any month, any day-of-week
+
+*/15 * * * *	every 15 minutes, at 1:15, 1:30: 1:45, 2:00, 2:15 . . .
+
+H/15 * * * *	every 15 minutes, but not at top, bottom and quarters of the hour
+			(uses a stable randomized offset based on the project's name)
+
+H * * * * 		once an hour, at a stable, randomized minute
+
+
+
+
+
+
+
+Part 5: Configure Jenkins for Android building
+
+1.	Need Java Development Kit (good news, we already have that!)
+
+2.	Need the Android SDK (good news: we already have that!)
+	(possibly bad news) - it might not be in a location Jenkins can access
+
+	2.1	Find location of Android SDK
+	In Android Studio select File -> Settings then Languages & Frameworks -> Android SDK
+
+	If your Android SDK is in a generally available location (e.g. c:\Program Files\Android Studio\. . .)
+	then no worries!
+
+	If your Android SDK is in your user directory, we need to copy it to a generally available location
+	(b/c the account Jenkins is using needs to access the Android SDK)
+
+
+3.	Tell Jenkins where to find JDK - Manage Jenkins -> Tools -> JDK Installations
+	
+	Add JDK - give it a name, supply the directory where JDK is installed
+
+
+4.	Tell Jenkins where to find Android SDK - Manage Jenkins -> System -> Global properties
+	Turn on Environment variables, create one called ANDROID_HOME, value = location of Android SDK
+
+
+
+
+
+Part 6: Useful Jenkins plugins we will use
+
+Pipeline
+Git
+GitHub Branch Source
+Warnings	(Warnings-ng)
+Coverage
+Timestamper
+Workspace Cleanup
+HTML Publisher
+Pipeline: Stage View
+
+
+
+
+
+
+
+Sidequest: Validate a Jenkinsfile without executing it.
+
+Needed: a security token to prove to Jenkins you are authorized to issue this command
+from a terminal
+
+1. Click your user icon in the top-right of Jenkins -> Security -> Add new token
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
